@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/*
+/node_modules/*
+
+# React build files
+/build/
+
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# npm package lock
+package-lock.json
+npm-debug.log
+
+# React specific files
+/.cache/
+/public/static/
+/*.tgz
+
+# Testing coverage
+/coverage/
+
+# IDE and editor files
+.vscode/
+/.idea/
+
+# Temporary files (editor swap files, etc.)
+*.swp
+*.swo
+
+# Dist folder (optional, depends on your build setup)
+/dist/
+
+# Uploads directory (if any)
+/src/uploads/
