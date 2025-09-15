@@ -7,6 +7,7 @@ require('dotenv').config();
 
 const userRoutes = require('./routes/userRoutes');
 const storeRoutes = require('./routes/storeRoutes');
+const transactionRoutes = require('./routes/transactionRoutes');
 
 
 const PORT = process.env.PORT || 3000;
@@ -25,5 +26,6 @@ app.use(cors());
 
 app.use('/api/users', userRoutes);
 app.use('/api/stores', storeRoutes);
+app.use('/api/transactions', transactionRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

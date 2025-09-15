@@ -4,8 +4,8 @@ const Store = require('../models/Store');
 exports.getAllStores = async (req, res) => {
     try {
         const stores = await Store.find()
-            .populate('createdBy', 'name email') // populate createdBy
-            .populate('updatedBy', 'name email'); // populate updatedBy
+            .populate('createdBy', 'name email')
+            .populate('updatedBy', 'name email');
         res.status(200).json({ success: true, data: stores });
     } catch (err) {
         res.status(500).json({ success: false, error: err.message });
@@ -52,8 +52,6 @@ exports.getStoreById = async (req, res) => {
 exports.createStore = async (req, res) => {
     try {
         const { stallId, name, owner, group, amount, isActive } = req.body;
-        console.log(req.body);
-
 
         // Validate required fields
         if (!stallId || !name || !owner || !group || amount === undefined) {
